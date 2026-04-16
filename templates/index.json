@@ -65,10 +65,82 @@
         "second_img": "shopify://shop_images/Frame_1.svg",
         "announcement_text": "SUSTAINABLE, ETHICALLY MADE CLOTHES IN SIZES XXS TO 6XL"
       }
+    },
+    "custom_popup_cards_zNxGUt": {
+      "type": "custom-popup-cards",
+      "blocks": {
+        "card_FwaPbb": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/image_822.png",
+            "product": "black-leather-bag",
+            "vertical_pos": 67,
+            "horizontal_pos": 62
+          }
+        },
+        "card_xGFCq9": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/image_823.png",
+            "product": "blue-silk-tuxedo",
+            "vertical_pos": 49,
+            "horizontal_pos": 82
+          }
+        },
+        "card_GzKCtn": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/image_824.png",
+            "product": "chequered-red-shirt",
+            "vertical_pos": 57,
+            "horizontal_pos": 50
+          }
+        },
+        "card_F887MB": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/image_825.png",
+            "product": "classic-leather-jacket",
+            "vertical_pos": 20,
+            "horizontal_pos": 80
+          }
+        },
+        "card_Wh6Tdq": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/image_826.png",
+            "product": "classic-varsity-top",
+            "vertical_pos": 27,
+            "horizontal_pos": 48
+          }
+        },
+        "card_9UR7Eq": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/image_827.png",
+            "product": "dark-denim-top",
+            "vertical_pos": 43,
+            "horizontal_pos": 78
+          }
+        }
+      },
+      "block_order": [
+        "card_FwaPbb",
+        "card_xGFCq9",
+        "card_GzKCtn",
+        "card_F887MB",
+        "card_Wh6Tdq",
+        "card_9UR7Eq"
+      ],
+      "name": "Popup Product Cards",
+      "settings": {
+        "title": "Tisso vison in the wild"
+      }
     }
   },
   "order": [
     "image_banner",
-    "custom_banner_Wp86Eb"
+    "custom_banner_Wp86Eb",
+    "custom_popup_cards_zNxGUt"
   ]
 }
