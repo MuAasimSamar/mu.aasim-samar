@@ -1,0 +1,417 @@
+<style>
+.custom-banner-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+    overflow: hidden;
+}
+
+.custom-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #F5F5F5;
+    padding: 10px 55px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.hamburger {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;    
+    gap: 20px;
+}
+.hamburger .line {
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.hamburger.active .line1 {
+  transform: translateY(5px) rotate(45deg);
+}
+
+.hamburger.active .line2 {
+  opacity: 0;
+}
+
+.hamburger.active .line3 {
+  transform: translateY(-5px) rotate(-45deg);
+}
+.custom-header p {
+    margin: 0;
+    font-size: 16px;
+    color: #000;
+}
+
+.custom-header a {
+    background: #FFF544;
+    text-decoration: none;
+    padding: 12px 31px;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #000;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    position: relative;
+    z-index: 1;
+}
+.custom-header a::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #000;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+    z-index: -1;
+}
+
+.custom-header a:hover::before {
+    transform: scaleX(1);
+}
+.custom-header a:hover {
+    color: #FFF;
+    z-index: 1;
+}
+.custom-header a:hover svg path {
+    fill: #FFF;
+}
+
+.mobile-menu {
+    width: 100%;
+    background: #F5F5F5;
+    text-align: center;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease;
+}
+
+.mobile-menu.active {
+    max-height: 200px;
+    padding: 25px 0;
+}
+
+.mobile-menu p {
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 16px;
+    color:#000;
+}
+
+.mobile-menu a {
+    display: inline-flex;
+    background: #FFF544;
+    padding: 9px 29px 9px 58px;
+    text-decoration: none;
+    color: #000;
+    align-items: center;
+    gap: 29px;
+    text-transform: uppercase;
+}
+
+.first_img_container img {
+    width: 100vw;
+    object-fit: cover;
+}
+
+.iwt_container {
+    display: flex;
+    width: 100vw;
+}
+
+.iwt_container .first_part {
+    flex: 0 0 39%;
+    padding-left: 60px;
+}
+
+.iwt_container .second_part {
+    flex: 0 0 61%;
+}
+
+.iwt_container .second_part img {
+    width: 100%;
+}
+
+.iwt_container h2 {
+    font-size: 70px;
+    color: #000;
+    font-weight: 700;
+    margin: 35px 0 50px;
+}
+
+.iwt_container p {
+    font-size: 20px;
+    line-height: 140%;
+    color: #000;
+    margin-bottom: 50px;
+}
+
+.iwt_container a {
+    font-size: 16px;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    gap: 18px;
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 41px;
+    position: relative;
+    z-index: 1;
+}
+
+.announcement_bar {
+    background: #F5F5F5;
+    text-align: center;
+    width: 100%;
+}
+.iwt_container a::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #FFF544;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+    z-index: -1;
+}
+
+.iwt_container a:hover::before {
+    transform: scaleX(1);
+}
+.iwt_container a:hover {
+    color: #000;
+    z-index: 1;
+}
+.iwt_container a:hover svg path {
+    fill: #000;
+}
+.announcement_bar h4 {
+    font-size: 16px;
+    padding: 10px 0;
+    margin: 0;
+    letter-spacing: 0;
+}
+    .header-m-logo {
+    display: none;
+    }
+@media (max-width: 768px) {
+    .custom-header {
+        padding: 9px 16px;
+    }
+    .header-m-logo {
+        display: block;
+        margin: 0 auto;
+    }
+    .header-content {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .iwt_container {
+        flex-direction: column;
+        position: relative;
+    }
+     .first_img_container img {
+        display: none;
+     }
+    .iwt_container .second_part {
+        flex: 100%;
+    }
+    .iwt_container .first_part {
+        flex: 100%;
+        padding: 0 16px;
+    }
+
+    .iwt_container h2 {
+        font-size: 30px;
+        text-align: center;
+        margin: 49px 0 24px;
+    }
+    .iwt_container p {
+    font-size: 16px;
+    margin-bottom: 12px;
+    text-align: center;
+    }
+     .iwt_container a {
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 8px 34px;
+     }
+    .iwt_container .second_part img {
+    height: 264px;
+    object-fit: cover;
+   }
+   .announcement_bar h4 {
+    font-size: 12px;
+    padding: 10px 0;
+   }
+}
+</style>
+
+<section class="custom-banner-container">
+
+  <div class="custom-header">
+    
+   <div class="hamburger" id="hamburger">
+  <svg class="hamburger-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 20 12" fill="none">
+    <path class="line line1" d="M1 1H19" stroke="black" stroke-width="2" stroke-linecap="round"/>
+    <path class="line line2" d="M1 6H19" stroke="black" stroke-width="2" stroke-linecap="round"/>
+    <path class="line line3" d="M1 11H19" stroke="black" stroke-width="2" stroke-linecap="round"/>
+  </svg>
+</div>
+    <img src="{{ section.settings.header_logo | image_url }}" class="header-m-logo"/>
+    
+    <div class="header-content">
+    <img src="{{ section.settings.header_logo | image_url }}" />
+      <p>{{ section.settings.header_txt }}</p>
+      <a href="{{ section.settings.header_btn_link }}">
+        {{ section.settings.header_btn_txt }}
+        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="12" viewBox="0 0 26 12" fill="none">
+        <path d="M0.75 4.77298L7.37629e-08 4.77298L-7.37629e-08 6.27298L0.75 6.27298L0.75 4.77298ZM25.2803 6.05331C25.5732 5.76042 25.5732 5.28554 25.2803 4.99265L20.5074 0.21968C20.2145 -0.073213 19.7396 -0.0732131 19.4467 0.21968C19.1538 0.512574 19.1538 0.987447 19.4467 1.28034L23.6893 5.52298L19.4467 9.76562C19.1538 10.0585 19.1538 10.5334 19.4467 10.8263C19.7396 11.1192 20.2145 11.1192 20.5074 10.8263L25.2803 6.05331ZM0.75 6.27298L24.75 6.27298L24.75 4.77298L0.75 4.77298L0.75 6.27298Z" fill="black"/>
+        </svg>
+      </a>
+    </div>
+
+  </div>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <p>{{ section.settings.header_txt }}</p>
+    <a href="{{ section.settings.header_btn_link }}">
+      {{ section.settings.header_btn_txt }}
+        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="12" viewBox="0 0 26 12" fill="none">
+        <path d="M0.75 4.77298L7.37629e-08 4.77298L-7.37629e-08 6.27298L0.75 6.27298L0.75 4.77298ZM25.2803 6.05331C25.5732 5.76042 25.5732 5.28554 25.2803 4.99265L20.5074 0.21968C20.2145 -0.073213 19.7396 -0.0732131 19.4467 0.21968C19.1538 0.512574 19.1538 0.987447 19.4467 1.28034L23.6893 5.52298L19.4467 9.76562C19.1538 10.0585 19.1538 10.5334 19.4467 10.8263C19.7396 11.1192 20.2145 11.1192 20.5074 10.8263L25.2803 6.05331ZM0.75 6.27298L24.75 6.27298L24.75 4.77298L0.75 4.77298L0.75 6.27298Z" fill="black"/>
+        </svg>
+    </a>
+  </div>
+
+  <div class="first_img_container">
+    <img src="{{ section.settings.first_img | image_url }}" />
+  </div>
+
+  <div class="iwt_container">
+    <div class="first_part">
+      <h2>{{ section.settings.banner_title }}</h2>
+      <p>{{ section.settings.banner_subtitle }}</p>
+      <a href="{{ section.settings.banner_btn_link }}">
+        {{ section.settings.banner_btn_txt }}
+        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="12" viewBox="0 0 27 12" fill="none">
+        <path d="M0.75 4.77295L7.83954e-08 4.77295L-7.83954e-08 6.27295L0.75 6.27295L0.75 4.77295ZM26.7876 6.05328C27.0805 5.76039 27.0805 5.28551 26.7876 4.99262L22.0146 0.21965C21.7217 -0.0732435 21.2468 -0.0732435 20.9539 0.21965C20.6611 0.512543 20.6611 0.987417 20.9539 1.28031L25.1966 5.52295L20.9539 9.76559C20.6611 10.0585 20.6611 10.5334 20.9539 10.8263C21.2468 11.1191 21.7217 11.1191 22.0146 10.8263L26.7876 6.05328ZM0.75 6.27295L26.2572 6.27295L26.2572 4.77295L0.75 4.77295L0.75 6.27295Z" fill="white"/>
+        </svg>
+      </a>
+    </div>
+
+    <div class="second_part">
+      <img src="{{ section.settings.second_img | image_url }}" />
+    </div>
+  </div>
+
+  <div class="announcement_bar">
+    <h4>{{ section.settings.announcement_text }}</h4>
+  </div>
+
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const hamburger = document.getElementById("hamburger");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  hamburger.addEventListener("click", function () {
+    hamburger.classList.toggle("active");
+    mobileMenu.classList.toggle("active");
+  });
+});
+</script>
+
+{% schema %}
+{
+"name": "Custom Banner",
+"settings": [
+{
+"type": "image_picker",
+"label": "Header Logo",
+"id": "header_logo"
+},
+{
+"type": "text",
+"label": "Header Text",
+"id": "header_txt",
+"default": "Find the ideal gift for your loved ones."
+},
+{
+"type": "text",
+"label": "Header Button Text",
+"id": "header_btn_txt",
+"default": "choose gift"
+},
+{
+"type": "url",
+"label": "Header Button Link",
+"id": "header_btn_link"
+},
+{
+"type": "image_picker",
+"label": "First Image",
+"id": "first_img"
+},
+{
+"type": "text",
+"label": "Banner Title",
+"id": "banner_title",
+"default": "The Gift Guide"
+},
+{
+"type": "text",
+"label": "Banner Subtitle",
+"id": "banner_subtitle",
+"default": "Discover Joy: Your Ultimate Holiday Gift Destination. Explore our curated selection and find the perfect gifts to delight your loved ones this holiday season."
+},
+{
+"type": "text",
+"label": "Banner Button",
+"id": "banner_btn_txt",
+"default": "Shop Now"
+},
+{
+"type": "url",
+"label": "Banner Button Link",
+"id": "banner_btn_link"
+},
+{
+"type": "image_picker",
+"label": "Second Image",
+"id": "second_img"
+},
+{
+"type": "text",
+"label": "Announcement Text",
+"id": "announcement_text",
+"default": "SUSTAINABLE, ETHICALLY MADE CLOTHES IN SIZES XXS TO 6XL"
+}
+],
+"presets": [
+{
+"name": "Custom Banner" 
+}
+]
+}
+{% endschema %}
